@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hnad-in-Hand</title>
+    <title>Hand-in-Hand</title>
 </head>
 <body>
     <!-- semantic HTML -->
@@ -13,20 +13,18 @@
         </div>
         <nav class="nav">
             <ul class="nav-links">
-                <li><a href="#">Who We Are</a></li>
-                <li><a href="#">Our Mission</a></li>
-                <!-- psuedo element -->
-                <a href="#">Support</a>
-
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Submit</a></li>
-            </ul>
-
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
+                <li><a href="/who-we-are.html">Who We Are</a></li>
+                <li><a href="/our-mission.html">Our Mission</a></li>
+                <li class="dropdown">
+                     <!-- psuedo element -->
+                    <a href="#">Support</a>
+                    <ul class="drowpdown-menu"> 
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/submit.html">Submit</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </li>
+               
             </ul>
         </nav>
     </header>
