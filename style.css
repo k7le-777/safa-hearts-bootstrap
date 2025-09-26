@@ -11,3 +11,9 @@
     --background-light: #f9f9f9;
     --background-dark: #121212;
 }
+
+*, ::before, ::after {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
