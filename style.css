@@ -1,0 +1,13 @@
+:root {
+    --green-primary: #2b7a0b;
+    --green-secondary: #4caf50;
+    --accent: #f2c94c;
+    --text-dark: #222;
+    --text-light: #fff;
+    --spacing: 1rem;
+    --border-radius: 8px;
+    --typography: Arial, 'sans-serif';
+    /* background for light/dark mmode later */
+    --background-light: #f9f9f9;
+    --background-dark: #121212;
+}
