@@ -103,6 +103,63 @@ nav-links a {
     background-color: var(--background-light);
 }
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--background-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    list-style: none;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition-all);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.75rem var(--spacing);
+    color: var(--text-color);
+    transition: background-color var(--transition-all);
+    transform: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--background-light);
+    color: var(--green-primary);
+    text-shadow: none;
+}
+
+.dropdown > a {
+    position: relative;
+}
+
+.dropdown > a::after {
+    content: ' ▼';
+    font-size: 0.8em;
+    margin-left: 0.5rem;
+    transition: transform var(--transition-base);
+}
+
+
 /* main */
 
 .hero {
