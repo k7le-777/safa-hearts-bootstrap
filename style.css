@@ -5,7 +5,6 @@
 
     --typography: Arial, 'sans-serif';
    
-   
     --text-shadow-df:0 1 3px rgba(0, 0, 0, 0.2);
     --text-shadow-glow:0 0 8px rgba(0, 144, 0, 0.6);
     --transition-all: all 0.3s ease;
@@ -26,10 +25,6 @@
     --icon-person: url('/img/icon-person.png');
     --icon-heart: url('/img/icon-heart.png');
     
-
-    /* background for light/dark mmode later */
-    --background-light: #f9f9f9;
-    --background-dark: #121212;
 }
 
 *, 
@@ -47,7 +42,7 @@ html, body {
 body {
     font-family: var(--typography);
     color: var(--text-color);
-    background: var(--background-color);
+    background: var(--green-light);
     line-height: 1.6;
 }
 
@@ -91,7 +86,7 @@ header {
     gap: var(--spacing-lg);
 }
 
-nav-links a {
+.nav-links a {
     color: var(--text-color);
     padding: 0.5rem var(--spacing);
     border-radius: var(--border-radius);
@@ -138,7 +133,7 @@ nav-links a {
     display: block;
     padding: 0.75rem var(--spacing);
     color: var(--text-color);
-    transition: background-color var(--transition-all);
+    transition: var(--transition-all);
     transform: none;
 }
 
@@ -148,15 +143,16 @@ nav-links a {
     text-shadow: none;
 }
 
-.dropdown > a {
-    position: relative;
-}
-
 .dropdown > a::after {
     content: ' ▼';
     font-size: 0.8em;
     margin-left: 0.5rem;
-    transition: transform var(--transition-base);
+    transition: var(--transition-transform);
+    display: inline-block;
+}
+
+.dropdown:hover > a::after {
+    transform: rotate(180deg);
 }
 
 
