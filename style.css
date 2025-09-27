@@ -1,20 +1,19 @@
 :root {
-    --green-primary: #2b7a0b;
-    --green-secondary: #4caf50;
-    --accent: #f2c94c;
+    --green-primary: #009000;
+    --green-dark: #006a00;
+    --green-light: #33b333;
 
     --typography: Arial, 'sans-serif';
    
     --icon-person: url('/img/icon-person.png');
     --icon-heart: url('/img/icon-heart.png');
 
-    --text-dark: #222;
-    --text-light: #fff;
-    --text
+    --text-shadow-df:0 1 3px rgba(0, 0, 0, 0.2);
+    --text-shadow-glow:0 0 8px rgba(0, 144, 0, 0.6);
 
-    --background-light: #f9f9f9;
-    --background-dark: #121212;
-    --background-white: #fff;
+    --text-color: #1a1a1a;
+    --background-color: #ffffff;
+    --background-dark: #f5f5f5f5;
 
     --spacing: 1rem;
     --spacing-lg: 2em;
@@ -38,7 +37,7 @@
 }
 
 a {
-  color: var(--accent);
+  color: var(--green-light);
   text-decoration: none;
   transition: all 0.3s ease; 
   display: inline-block; 
