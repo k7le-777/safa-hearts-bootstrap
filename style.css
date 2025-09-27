@@ -13,6 +13,13 @@
 
     --background-light: #f9f9f9;
     --background-dark: #121212;
+
+    --spacing: 1rem;
+    --spacing-lg: 2em;
+    --border-radius: 8px;
+
+    --icon-person: url('/img/icon-person.png');
+    --icon-heart: url('/img/icon-heart.png');
     
 
     /* background for light/dark mmode later */
@@ -41,6 +48,7 @@ body {
     font-family: var(--typography);
     color: var(--text-dark);
     background: var(--background-light);
+    line-height: 1.6;
 }
 
 
@@ -52,9 +60,9 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: sspace-between;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: var(--) 2rem;
 }
 
 /* main */
