@@ -1,7 +1,8 @@
 :root {
     --green-primary: #009000;
     --green-dark: #006a00;
-    --green-light: #33b333;
+    --green-light: #22e822;
+
 
     --typography: Arial, 'sans-serif';
    
@@ -15,9 +16,10 @@
     --text-color: #1a1a1a;
     --background-white: #ffffff;
     --background-dark: #121212;
+    --background-light: #33b333;
 
     --spacing: 1rem;
-    --spacing-lg: 2em;
+    --spacing-lg: 3em;
 
     --border-radius: 8px;
     
@@ -42,7 +44,7 @@ html, body {
 body {
     font-family: var(--typography);
     color: var(--text-color);
-    background: var(--green-light);
+    background: var(--background-light);
     line-height: 1.6;
 }
 
@@ -162,7 +164,7 @@ header {
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(135deg, var(--green-primary), var(--green-light));
-    background-image: url('/img/pov5.jpg');
+    background-image: url('/img/p10.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -175,7 +177,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 144, 0, 0.7);
+    background: rgba(0, 144, 0, 0.2);
     z-index: 1;
 }
 
@@ -191,11 +193,11 @@ header {
     font-size: 3.5rem;
     margin-bottom: var(--spacing-lg);
     text-shadow: var(--text-shadow-df);
-    line-height: 1.3;
+    line-height: 1.5;
 }
 
 .hero-content p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: var(--spacing-lg);
     text-shadow: var(--text-shadow-df);
     opacity: 0.95;
@@ -204,7 +206,7 @@ header {
 .btn-primary {
     display: inline-block;
     padding: var(--spacing) var(--spacing-lg);
-    background: var(--green-light);
+    background: var(--green-dark);
     color: var(--background-white);
     border: none;
     border-radius: var(--border-radius);
@@ -220,10 +222,20 @@ header {
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background: var(--green-light);
+    background: var(--green-primary);
     transform: translateY(-3px);
-    box-shadow: 0 3px 20px rgb(113, 255, 11);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
     text-shadow: none;
+}
+
+.btn-primary .highlight-word {
+    transition: var(--transition-color);
+}
+
+.btn-primary:hover .highlight-word,
+.btn-primary:focus .highlight-word {
+    color: var(--green-light);
+    text-shadow: var(--text-shadow-glow);
 }
 
 @media (max-width: 768px) {
