@@ -5,19 +5,23 @@
 
     --typography: Arial, 'sans-serif';
    
-    --icon-person: url('/img/icon-person.png');
-    --icon-heart: url('/img/icon-heart.png');
-
+   
     --text-shadow-df:0 1 3px rgba(0, 0, 0, 0.2);
     --text-shadow-glow:0 0 8px rgba(0, 144, 0, 0.6);
+    --transition-all: all 0.3s ease;
+    --transition-color: color 0.3s ease;
+    --transition-transform: transform 0.3s ease;
+
 
     --text-color: #1a1a1a;
-    --background-color: #ffffff;
-    --background-dark: #f5f5f5f5;
+    --background-white: #ffffff;
+    --background-dark: #121212;
 
     --spacing: 1rem;
     --spacing-lg: 2em;
+
     --border-radius: 8px;
+    
 
     --icon-person: url('/img/icon-person.png');
     --icon-heart: url('/img/icon-heart.png');
@@ -36,22 +40,30 @@
     padding: 0;
 }
 
-a {
-  color: var(--green-light);
-  text-decoration: none;
-  transition: all 0.3s ease; 
-  display: inline-block; 
-}
-
 html, body {
     height: 100%;
 }
 
 body {
     font-family: var(--typography);
-    color: var(--text-dark);
-    background: var(--background-light);
+    color: var(--text-color);
+    background: var(--background-color);
     line-height: 1.6;
+}
+
+a {
+  color: var(--green-light);
+  text-decoration: none;
+  transition: var(--transition-all); 
+  display: inline-block; 
+}
+
+a:hover,
+a:focus {
+  color: var(--green-dark);
+  text-shadow: var(--text-shadow-glow);
+  transform: scale(1.05);
+  outline: none;
 }
 
 
@@ -77,19 +89,25 @@ header {
     list-style: none;
     display: flex;
     gap: var(--spacing-lg);
-    border-radius: var(--border-radius);
 }
 
+nav-links a {
+    color: var(--text-color);
+    padding: 0.5rem var(--spacing);
+    border-radius: var(--border-radius);
+}
 .nav-links a:hover,
 .nav-links a:focus {
-    color: var(--green-secondary);
-    text-shadow: ;
+    color: var(--green-dark);
+    text-shadow: var(--text-shadow-df);
+    background-color: var(--background-light);
 }
 
 /* main */
 
 .hero {
     display:flex;
+    min-height: 70vh;
 }
 
 /* footer */
