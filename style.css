@@ -19,7 +19,7 @@
     --background-light: #33b333;
 
     --spacing: 1rem;
-    --spacing-lg: 3em;
+    --spacing-lg: 2em;
 
     --border-radius: 8px;
     
@@ -190,10 +190,10 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: var(--spacing-lg);
     text-shadow: var(--text-shadow-df);
-    line-height: 1.5;
+    line-height: 1.25;
 }
 
 .hero-content p {
