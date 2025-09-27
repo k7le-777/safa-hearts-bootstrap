@@ -2,11 +2,20 @@
     --green-primary: #2b7a0b;
     --green-secondary: #4caf50;
     --accent: #f2c94c;
+
+    --typography: Arial, 'sans-serif';
+   
+    --icon-person: url('/img/icon-person.png');
+    --icon-heart: url('/img/icon-heart.png');
+
     --text-dark: #222;
     --text-light: #fff;
-    --spacing: 1rem;
-    --border-radius: 8px;
-    --typography: Arial, 'sans-serif';
+
+    --background-light: #f9f9f9;
+    --background-dark: #121212;
+    --background
+    
+
     /* background for light/dark mmode later */
     --background-light: #f9f9f9;
     --background-dark: #121212;
