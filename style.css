@@ -13,7 +13,6 @@
 
     --background-light: #f9f9f9;
     --background-dark: #121212;
-    --background
     
 
     /* background for light/dark mmode later */
@@ -49,6 +48,13 @@ body {
 header {
     width: 100%;
     background: var(--green-primary);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
 /* main */
