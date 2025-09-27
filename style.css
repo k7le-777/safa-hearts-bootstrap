@@ -12,7 +12,9 @@
     --background-dark: #121212;
 }
 
-*, ::before, ::after {
+*, 
+::before, 
+::after {
     box-sizing:border-box;
     margin: 0;
     padding: 0;
@@ -22,3 +24,25 @@ a:hover {
     color: var(--green-secondary);
     text-decoration: underline;
 }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--typography);
+    color: var(--text-dark);
+    background: var(--background-light);
+}
+
+
+/* header */
+
+
+/* main */
+
+.hero {
+    display:flex;
+}
+
+/* footer */
