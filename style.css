@@ -10,9 +10,11 @@
 
     --text-dark: #222;
     --text-light: #fff;
+    --text
 
     --background-light: #f9f9f9;
     --background-dark: #121212;
+    --background-white: #fff;
 
     --spacing: 1rem;
     --spacing-lg: 2em;
@@ -35,9 +37,11 @@
     padding: 0;
 }
 
-a:hover {
-    color: var(--green-secondary);
-    text-decoration: underline;
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease; 
+  display: inline-block; 
 }
 
 html, body {
@@ -62,7 +66,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--) 2rem;
+    padding: var(--spacing) var(--spacing-lg);
+    background-color: var(--background-white);
+}
+
+.logo img {
+    height: 110px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-lg);
+    border-radius: var(--border-radius);
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--green-secondary);
+    text-shadow: ;
 }
 
 /* main */
