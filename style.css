@@ -461,7 +461,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    opacity: 1;
+    opacity: 0.9;
     color: var(--green-light);
     transform: none;
 }
