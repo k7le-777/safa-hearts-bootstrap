@@ -258,6 +258,10 @@ header {
 
 /* main */
 
+
+
+/* INDEX */
+
 .how-it-works,
 .stats-section {
     padding: var(--spacing-lg) 0;
@@ -479,7 +483,7 @@ header {
     text-shadow: none;
 }
 
-/* contact-page */
+/* CONTACT PAGE */
 
 .contact-hero {
     background: linear-gradient(135deg, var(--green-primary), var(--green-light));
@@ -839,6 +843,35 @@ header {
     .content-text h2 {
         font-size: 2rem;
     }
+}
+
+/* OUR MISSION PAGE */
+
+.mission-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.mission-card {
+    flex: 1;
+    min-width: 250px;
+    background: var(--background-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--green-primary);
+    transition: var(--transition-all);
+}
+
+.mission-card:hover {
+    transform: translateY(5px);
+    box-shadow: 0 4px 15px rgba(0, 144, 0, 0.15);
+}
+
+.mission-card h3 {
+    margin-bottom: var(--spacing);
+    color: var(--background-primary);;
 }
 
 
