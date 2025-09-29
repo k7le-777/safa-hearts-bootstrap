@@ -876,7 +876,32 @@ header {
 
 /* SERVICES PAGE */
 
+.services-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+}
 
+.service-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    padding: var(--spacing-lg);
+    background: var(--background-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    text-align: center;
+}
+
+.service-item h3 {
+    margin-bottom: var(--spacing);
+    color: var(--green-primary);
+}
+
+.service-item p {
+    margin-bottom: var(--spacing-lg);
+}
 
 
 /* footer */
