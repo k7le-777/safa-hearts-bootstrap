@@ -863,7 +863,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: var(--spacing);
-    margin-bottom: var(--spacing);
+    margin-bottom: var(--spacing);;
 }
 
 .footer-logo img {
