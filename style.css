@@ -649,7 +649,7 @@ header {
     color: var(--text-color);
 }
 
-.values.grid {
+.values-grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
