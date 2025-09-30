@@ -2,28 +2,39 @@
     --green-primary: #009000;
     --green-dark: #006a00;
     --green-light: #22e822;
-
-
-    --typography: Arial, 'sans-serif';
-   
-    --text-shadow-df:0 1 3px rgba(0, 0, 0, 0.2);
-    --text-shadow-glow:0 0 8px rgba(0, 144, 0, 0.6);
-    --transition-all: all 0.3s ease;
-    --transition-color: color 0.3s ease;
-    --transition-transform: transform 0.3s ease;
-
-
     --text-color: #1a1a1a;
     --background-white: #ffffff;
     --background-dark: #122519;
     --background-light: #f9f9f9;
+    --border-color-light: #ddd;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --shadow-glow: rgba(0, 0, 0, 0.6);
 
+
+    --typography: Arial, 'sans-serif';
+    --font-sm: 0.9rem;
+    --font-bs: 1rem;
+    --font-md: 1.2rem;
+    --font-lg: 1.5rem;
+    --font-xl: 2rem;
+    --font-xxl: 2.5rem;
+    
+    --text-shadow-df:0 1 3px var(--shadow-medium);
+    --text-shadow-glow:0 0 8px var(--shadow-glow);
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
     --spacing: 1rem;
-    --spacing-lg: 2em;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
 
     --border-radius: 8px;
+    --transition-all: all 0.3s ease;
+    --transition-color: color 0.3s ease;
+    --transition-transform: transform 0.3s ease;
     
-
     --icon-person: url('/img/icon-person.png');
     --icon-heart: url('/img/icon-heart.png');
     
@@ -110,10 +121,10 @@ header {
     top: 100%;
     right: 0;
     background-color: var(--background-white);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--shadow-light);
     border-radius: var(--border-radius);
     list-style: none;
-    padding: 0.5rem 0;
+    padding: var(--spacing-sm);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -134,13 +145,14 @@ header {
 
 .dropdown-content a {
     display: block;
-    padding: 0.75rem var(--spacing);
+    padding: var(--spacing-sm) var(--spacing);
     color: var(--text-color);
     transition: var(--transition-all);
     transform: none;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover
+.dropdown-content a:focus {
     background-color: var(--background-light);
     color: var(--green-primary);
     text-shadow: none;
@@ -156,6 +168,11 @@ header {
 
 .dropdown:hover > a::after {
     transform: rotate(180deg);
+}
+
+.dropdown:hover > a::after,
+.dropdown:focus-within > a::after {
+  transform: rotate(180deg);
 }
 
 .hero {
