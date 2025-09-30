@@ -209,14 +209,14 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: var(--font-xxl);
     margin-bottom: var(--spacing-lg);
     text-shadow: var(--text-shadow-df);
     line-height: 1.25;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: var(--font-lg);
     margin-bottom: var(--spacing-lg);
     text-shadow: var(--text-shadow-df);
     opacity: 0.95;
@@ -229,12 +229,12 @@ header {
     color: var(--background-white);
     border: none;
     border-radius: var(--border-radius);
-    font-size: 1.1rem;
+    font-size: var(--font-md);
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
     transition: var(--transition-all);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px var(--shadow-medium);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -243,7 +243,7 @@ header {
 .btn-primary:focus {
     background: var(--green-primary);
     transform: translateY(-3px);
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 20px var(--shadow-medium);
     text-shadow: none;
 }
 
@@ -264,11 +264,11 @@ header {
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: var(--font-xl);
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: var(--font-bs);
     }
 }
     
