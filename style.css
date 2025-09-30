@@ -895,6 +895,9 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: var(--transition-all);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service-card:hover {
@@ -917,6 +920,11 @@ header {
     color: var(--text-color);
     line-height: 1.6;
     margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+.service-card .btn-secondary {
+    margin-top: auto;
 }
 
 @media (max-width: 768px) {
