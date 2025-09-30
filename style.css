@@ -881,26 +881,53 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    margin-bottom: calc(var(--spacing-lg) * 2);
 }
 
-.service-item {
+.service-card {
     flex: 1;
     min-width: 280px;
     max-width: 350px;
     padding: var(--spacing-lg);
     background: var(--background-white);
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: var(--transition-all);
 }
 
-.service-item h3 {
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing);
+}
+
+.service-card h3 {
     margin-bottom: var(--spacing);
     color: var(--green-primary);
+    font-size: 1.3rem;
 }
 
-.service-item p {
+.service-card p {
+    color: var(--text-color);
+    line-height: 1.6;
     margin-bottom: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-card {
+        max-width: 100%;
+    }
 }
  
 
