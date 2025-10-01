@@ -271,10 +271,6 @@ header {
         font-size: var(--font-bs);
     }
 }
-    
-
-/* main */
-
 
 
 /* INDEX */
@@ -730,7 +726,7 @@ header {
 }
 
 .team-member:hover {
-    transform: translate(-5px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba( 0, 0, 0, 0.15  )
 }
 
@@ -819,7 +815,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--background-light), var(--background-primary));
+    background: linear-gradient(135deg, var(--green-light), var(--green-primary));
     border-radius: 50%;
     border: 3px dashed var(--green-dark);
     opacity: 0.8;
@@ -842,7 +838,7 @@ header {
 
 .placeholder-avatar:hover::before {
     opacity: 1;
-   transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .join-link {
@@ -914,7 +910,7 @@ header {
 
 .mission-card h3 {
     margin-bottom: var(--spacing);
-    color: var(--background-primary);
+    color: var(--green-primary);
     font-size: 1.3rem;
 }
 
