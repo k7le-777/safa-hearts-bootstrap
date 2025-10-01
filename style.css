@@ -230,7 +230,7 @@ header {
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(135deg, var(--green-primary), var(--green-light));
-    background-image: url('/img/p10.jpg');
+    background-image: url('./img/p10.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

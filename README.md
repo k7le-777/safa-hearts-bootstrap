@@ -3,8 +3,8 @@
 
 # 🎯 Project Overview
 -  Safa Hearts is a community support platform designed to bridge the gap between individuals seeking assistance and compassionate volunteers. The website demonstrates modern web development practices including responsive design, flexbox layouts, and accessible form design.
-- Live Site: [Add your deployment URL here]
-- Repository: [Add your GitHub repo URL here]
+- Live Site: https://k7le-777.github.io/safa-hearts/
+- Repository: https://github.com/k7le-777/safa-hearts
 
 ## Features
 - 5 Fully Responsive Pages: Home, Who We Are, Our Mission, Services, Contact
