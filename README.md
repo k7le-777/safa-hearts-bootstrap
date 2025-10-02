@@ -1,158 +1,230 @@
-# Safa Hearts - Community Support Platform
+# Safa Hearts - Bootstrap Migration (Week 3)
 
-A responsive, multi-page website connecting people who need help with those who want to give it, built with semantic HTML, CSS Flexbox, and CSS variables.
+A migration of the Safa Hearts platform from vanilla CSS to Bootstrap 4.5.2, demonstrating framework integration skills.
 
----
-
-## Project Overview
-
-Safa Hearts is a community support platform designed to bridge the gap between individuals seeking assistance and compassionate volunteers. The website demonstrates modern web development practices including responsive design, flexbox layouts, and accessible form design.
-
-**Live Site:** https://k7le-777.github.io/safa-hearts/  
-**Repository:** https://github.com/k7le-777/safa-hearts
+**Original Vanilla CSS Version:** https://github.com/k7le-777/safa-hearts
 
 ---
 
-## Features
+## Project Context
 
-- **5 Fully Responsive Pages:** Home, Who We Are, Our Mission, Services, Contact
-- **Flexbox Grid Layouts:** Cards, navigation, footer, and content sections
-- **CSS Variable System:** Consistent theming and easy customization
-- **Interactive Elements:** Dropdown navigation, hover effects, form validation
-- **Accessible Design:** Semantic HTML, proper form labels, keyboard navigation support
-- **Mobile-First Approach:** Breakpoints at 768px and 480px for optimal viewing
+This repository contains the Bootstrap-migrated version of Safa Hearts:
+- **Week 2:** Built from scratch with vanilla HTML/CSS (see original repo above)
+- **Week 3:** Migrated to Bootstrap framework (this repository)
 
 ---
 
-## Technologies Used
+## Live Sites
 
-- **HTML5** - Semantic markup with proper document structure
-- **CSS3** - Custom properties, Flexbox, media queries, pseudo-elements/classes
-- **No frameworks** - Vanilla HTML/CSS to demonstrate fundamental skills
-
-
-
-## Learning Journey
-
-### Challenges Overcome
-
-**Flexbox Alignment Issues**  
-Initially struggled with centering hero content when the HTML structure had nested divs. Learned that flexbox requires proper parent-child relationships and that absolute positioning can break flex alignment. Resolved by restructuring HTML so `.hero-content` was a direct flex child.
-
-**Dropdown Menu Mechanics**  
-Took time to understand how `position: relative` on the parent and `position: absolute` on the dropdown created the positioning context. Debugged issues with `opacity`, `visibility`, and `transform` needing to work together for smooth animations. Added `:focus-within` for keyboard accessibility after researching WCAG guidelines.
-
-**Pseudo-element Avatar System**  
-Originally tried using `content: url()` for icons in `::after` pseudo-elements, which didn't work. Learned that `background-image` must be used instead, and that pseudo-elements need `display: inline-block` to accept transform properties. This taught me the differences between inline and block-level elements.
-
-**Button Alignment in Cards**  
-Cards with varying text lengths caused buttons to appear at different heights. Discovered that adding `display: flex`, `flex-direction: column`, and `margin-top: auto` to the button creates consistent alignment. This was my "aha moment" understanding how flex-grow and auto margins work.
-
-**CSS Variable Mismatches**  
-Had several instances where I referenced undefined variables (like `--background-primary`) causing silent failures. Learned to systematically check variable names and understand that CSS fails silently - requiring browser DevTools inspection to debug.
-
-### Key Learnings
-
-**Responsive Design Philosophy**  
-Understanding that mobile-first design means starting with constraints and progressively enhancing for larger screens. Media queries aren't just about hiding/showing elements - they're about rethinking layouts entirely.
-
-**CSS Specificity & Cascade**  
-Encountered multiple cases where styles weren't applying due to specificity issues. Learned to use browser DevTools to trace which rules were being applied and why. Now understand the hierarchy: inline > ID > class > element.
-
-**Semantic HTML Importance**  
-Initially used generic `<div>` containers everywhere. Learned that `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>` improve both accessibility and code organization. Screen readers rely on this structure.
-
-**Form Accessibility**  
-Discovered that `<label for="id">` associations, required attributes, and proper input types aren't optional - they're essential for usability. Tested navigation using only keyboard (Tab key) to understand accessibility challenges.
+**This Version (Bootstrap):** later when finalised 
+**Original Version (Vanilla CSS):** https://k7le-777.github.io/safa-hearts/
 
 ---
 
-## Technical Decisions
+## Migration Status
 
-### Why Flexbox Over Grid?
-Chose Flexbox because the rubric specified it and it's ideal for one-dimensional layouts (rows or columns). Grid would be better for complex two-dimensional layouts, but Flexbox solved all layout needs here.
+🚧 **Currently migrating components to Bootstrap** 🚧
 
-### Single CSS File vs. Modular
-Kept all CSS in one file because the project size didn't warrant complexity of imports. Used clear section comments for organization. Would split into modules (`components.css`, `layout.css`, `pages.css`) for larger projects.
-
-### CSS Variables Strategy
-Defined color, spacing, and typography variables in `:root` for consistency. This made theme adjustments easy and reduced repetition. Named variables semantically (`--green-primary`, `--spacing-lg`) rather than by value (`--color-1`, `--size-2`).
-
-### Image Handling
-Used relative paths (`img/filename.jpg`) rather than absolute paths for portability. Would implement lazy loading and responsive images (`<picture>` element) for production deployment.
+### Completed
+- [x] Project setup and documentation
+- [ ] Navigation → Bootstrap Navbar
+- [ ] Card grids → Bootstrap Cards + Grid
+- [ ] Forms → Bootstrap Form components
+- [ ] Buttons → Bootstrap Button classes
+- [ ] Utility classes implementation
 
 ---
 
-## Responsive Breakpoints
+## Technologies
 
-- **Desktop:** 1200px+ (default)
-- **Tablet:** 768px-1199px (navigation adjusts, cards reflow)
-- **Mobile:** 480px-767px (single column, stacked navigation)
-- **Small Mobile:** <480px (reduced font sizes, compact spacing)
-
----
-
-## Accessibility Features
-
-- Semantic HTML5 elements throughout
-- Keyboard navigation support (`:focus-within` on dropdowns)
-- Proper form labels with `for` attributes
-- Sufficient color contrast ratios (WCAG AA compliant)
-- Alt text on all images
-- Skip-to-content would be added for production
+- HTML5
+- CSS3 + Bootstrap 4.5.2
+- jQuery (required for Bootstrap JS)
+- Custom CSS overrides for brand identity
 
 ---
 
-## Future Improvements
+## Bootstrap Components Used
 
-If I were to continue developing this project, I would add:
-
-1. **JavaScript interactivity** - Form validation, smooth scrolling, mobile hamburger menu
-2. **Backend integration** - Connect contact form to email service or database
-3. **Performance optimization** - Image lazy loading, CSS minification, critical CSS inline
-4. **Testing** - Cross-browser testing, accessibility audit with screen readers
-5. **Analytics** - Track user behavior to improve UX
-6. **CMS integration** - Allow non-technical updates to content
+1. Navbar with responsive hamburger menu
+2. Card component with grid system
+3. Form components with styling
+4. Button components
+5. Utility classes (spacing, alignment, colors)
 
 ---
 
-## Resources Used
+## What Changed vs Original
 
-- **MDN Web Docs** - CSS Flexbox reference and HTML semantics
-- **CSS-Tricks** - "A Complete Guide to Flexbox" article
-- **Claude AI** - Code review, debugging assistance, and concept explanations
-- **Chrome DevTools** - Inspecting elements, testing responsive design
-- **WAVE Accessibility Tool** - Checking accessibility compliance
+**Replaced with Bootstrap:**
+- Custom flexbox navigation → Bootstrap Navbar
+- Custom card layouts → Bootstrap Cards + Grid
+- Custom dropdown → Bootstrap Dropdown
+- Custom form styling → Bootstrap Form components
 
----
-
-## Rubric Compliance
-
-✅ **Flexbox for layout structure** - Navigation, card grids, footer  
-✅ **Flexbox alignment** - `justify-content`, `align-items`, `space-between`  
-✅ **Pseudo-element** - `::before` and `::after` for avatar placeholders  
-✅ **Pseudo-class** - `:hover`, `:focus`, `:focus-within` throughout  
-✅ **CSS variables** - Comprehensive theming system in `:root`  
-✅ **Contact form** - Styled with proper labels and validation  
-✅ **Multiple pages** - 5 pages with consistent navigation  
-✅ **Responsive design** - Mobile-first with media queries  
-✅ **Clean code** - Semantic HTML, organized CSS with comments  
+**Kept Custom:**
+- Green color scheme (brand identity)
+- Hero section styling
+- Mission/impact box designs
+- Pseudo-element avatars
+- CSS variables for custom theming
 
 ---
 
-## Acknowledgments
+**2. Create BOOTSTRAP_MIGRATION.md (your working document):**
+```markdown
+# Bootstrap Migration Plan
 
-This project was built as a learning exercise with guidance from online resources and AI assistance for debugging and understanding complex CSS concepts. All code was written and understood by me, with AI used as an educational tool to accelerate learning and overcome roadblocks.
-
----
-
-## License
-
-This project is for educational purposes. Feel free to reference for learning, but please don't submit as your own work.
+**Start Date:** [Today's date]  
+**Target Completion:** [7 days from now]
 
 ---
 
-**Built with 💚 by Ryan Burns**  
-*Spreading compassion through code*
+## Migration Objectives
 
-*This project is part of the Step9Up BootCamp curriculum and demonstrates fundamental web development skills.*
+1. Reduce custom CSS by ~60%
+2. Implement Bootstrap responsive grid system
+3. Add mobile hamburger menu
+4. Use minimum 3 Bootstrap components
+5. Apply Bootstrap utility classes
+6. Maintain green brand identity
+
+---
+
+## Current Analysis
+
+### Original Codebase Stats
+- **Custom CSS:** ~1000 lines
+- **Pages:** 5 (index, who-we-are, our-mission, services, contact)
+- **Custom Components:** navbar, cards, forms, buttons, footer
+- **Flexbox Layouts:** cards-grid, stats-grid, team-grid, services-grid
+
+---
+
+## Migration Schedule
+
+### Day 1: Foundation (2-3 hours)
+- [x] Create repository documentation
+- [x] Set up git workflow strategy
+- [ ] Add Bootstrap CDN to all HTML files
+- [ ] Test that nothing breaks
+- [ ] Commit: "feat: add bootstrap 4.5.2 cdn"
+
+### Day 2: Navigation (3-4 hours)
+- [ ] Migrate navbar to Bootstrap Navbar component
+- [ ] Implement hamburger menu for mobile
+- [ ] Test responsive breakpoints
+- [ ] Update CSS overrides for green theme
+- [ ] Remove old navbar CSS
+- [ ] Commit: "refactor: migrate navigation to bootstrap navbar"
+
+### Day 3: Card Grids (3-4 hours)
+- [ ] Convert index.html cards to Bootstrap Cards
+- [ ] Implement Bootstrap grid (row/col system)
+- [ ] Migrate who-we-are.html value cards
+- [ ] Migrate services.html service cards
+- [ ] Remove old card CSS
+- [ ] Commit: "refactor: convert card grids to bootstrap components"
+
+### Day 4: Stats & Team (2-3 hours)
+- [ ] Migrate stats grid to Bootstrap grid
+- [ ] Convert team cards to Bootstrap cards
+- [ ] Test equal height cards (h-100 class)
+- [ ] Remove old grid CSS
+- [ ] Commit: "refactor: migrate stats and team grids to bootstrap"
+
+### Day 5: Forms (2-3 hours)
+- [ ] Migrate contact form to Bootstrap form components
+- [ ] Add Bootstrap form validation classes
+- [ ] Test form inputs on mobile
+- [ ] Update form CSS overrides
+- [ ] Commit: "refactor: migrate contact form to bootstrap components"
+
+### Day 6: Utility Classes & Cleanup (2 hours)
+- [ ] Replace custom spacing with Bootstrap utility classes
+- [ ] Replace custom text alignment with Bootstrap classes
+- [ ] Migrate buttons to Bootstrap button classes
+- [ ] Remove redundant CSS
+- [ ] Commit: "refactor: apply bootstrap utility classes and cleanup css"
+
+### Day 7: Testing & Documentation (2 hours)
+- [ ] Test all pages on desktop/tablet/mobile
+- [ ] Cross-browser testing
+- [ ] Update README with final status
+- [ ] Create before/after comparison
+- [ ] Final commit: "docs: complete bootstrap migration documentation"
+
+---
+
+## Components Migration Tracking
+
+### Navigation
+- **Before:** Custom flexbox navbar, custom dropdown
+- **After:** Bootstrap Navbar with hamburger menu
+- **Status:** ⏳ Pending
+
+### Card Grids
+- **Before:** Custom flexbox grid system
+- **After:** Bootstrap grid (row/col) + Card component
+- **Status:** ⏳ Pending
+
+### Forms
+- **Before:** Custom form styling
+- **After:** Bootstrap form components
+- **Status:** ⏳ Pending
+
+### Buttons
+- **Before:** Custom btn-primary, btn-secondary classes
+- **After:** Bootstrap button classes with overrides
+- **Status:** ⏳ Pending
+
+---
+
+## CSS Reduction Target
+
+**Current:** ~1000 lines custom CSS  
+**Target:** ~400 lines (60% reduction)  
+**Actual:** TBD
+
+---
+
+## Decisions Log
+
+### Why Keep Custom Hero Section?
+The hero section with background image and overlay is a unique brand element. Bootstrap doesn't provide a direct equivalent, so keeping custom CSS here makes sense.
+
+### Why Keep Pseudo-element Avatars?
+These demonstrate CSS pseudo-element skills and are simpler than adding actual images. Bootstrap has no avatar placeholder component.
+
+### Why Override Bootstrap Colors?
+The green color scheme is core to Safa Hearts brand identity. Bootstrap's default blue would require changing throughout.
+
+---
+
+## Testing Checklist
+
+### Visual Testing
+- [ ] Pages look similar to original
+- [ ] Green theme maintained throughout
+- [ ] Cards have proper shadows/borders
+- [ ] Buttons maintain hover effects
+
+### Functional Testing
+- [ ] All navigation links work
+- [ ] Dropdown opens/closes
+- [ ] Forms inputs work
+- [ ] Mobile menu expands/collapses
+
+### Responsive Testing
+- [ ] Desktop (1920px, 1440px, 1024px)
+- [ ] Tablet (768px)
+- [ ] Mobile (480px, 375px)
+- [ ] Hamburger appears at lg breakpoint (992px)
+
+### Cross-browser Testing
+- [ ] Chrome
+- [ ] Firefox
+- [ ] Safari
+- [ ] Edge
+
+---
