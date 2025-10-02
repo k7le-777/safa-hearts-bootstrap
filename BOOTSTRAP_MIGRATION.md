@@ -37,11 +37,11 @@
 
 ### Day 2: Navigation (3-4 hours)
 - [ ] Migrate navbar to Bootstrap Navbar component
-- [ ] Implement hamburger menu for mobile
-- [ ] Test responsive breakpoints
-- [ ] Update CSS overrides for green theme
-- [ ] Remove old navbar CSS
-- [ ] Commit: "refactor: migrate navigation to bootstrap navbar"
+- [x] Implement hamburger menu for mobile
+- [x] Test responsive breakpoints
+- [x] Update CSS overrides for green theme
+- [x] Remove old navbar CSS
+- [x] Commit: "refactor: migrate navigation to bootstrap navbar"
 
 ### Day 3: Card Grids (3-4 hours)
 - [ ] Convert index.html cards to Bootstrap Cards
