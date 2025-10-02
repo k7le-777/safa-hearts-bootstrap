@@ -952,6 +952,100 @@ header {
 
 /* OUR MISSION PAGE */
 
+.mission-intro {
+    max-width: 900px;
+    margin: 0 auto calc(var(--spacing-lg) * 2);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, #f9f9f9, #f0f9f0);
+    border-radius: var(--border-radius);
+    border-top: 3px solid var(--green-light);
+    border-bottom: 3px solid var(--green-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.mission-intro h2 {
+    color: var(--green-primary);
+    font-size: var(--font-xxl);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.intro-content {
+    text-align: center;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: var(--spacing);
+}
+
+.intro-content p:last-child {
+    margin-bottom: 0;
+}
+
+.impact-section {
+        max-width: 900px;
+    margin: calc(var(--spacing-lg) * 2) auto;
+    padding: calc(var(--spacing-lg) * 1.5);
+    background: var(--background-white);
+    border-radius: var(--border-radius);
+    border-left: 6px solid var(--green-primary);
+    box-shadow: 0 6px 20px var(--shadow-light);
+}
+
+.impact-section h2 {
+    color: var(--green-primary);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.impact-content {
+    text-align: center;
+}
+
+.impact-quote {
+    margin: 0 auto var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, var(--green-primary), var(--green-dark));
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.impact-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 6rem;
+    color: var(--green-light);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.impact-quote p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--background-white);
+    margin: 0;
+    font-style: italic;
+}
+
+.impact-content > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: var(--spacing);
+}
+
+.impact-content > p:last-child {
+    margin-bottom: 0;
+}
+
 .mission-cards {
     display: flex;
     flex-wrap: wrap;
@@ -990,6 +1084,26 @@ header {
 @media (max-width: 768px) {
     .approach-grid {
         flex-direction: column;
+    }
+
+    .mission-intro,
+    .impact-section {
+        padding: var(--spacing);
+    }
+    
+    .mission-intro h2,
+    .impact-section h2 {
+        font-size: var(--font-xl);
+    }
+    
+    .impact-quote::before {
+        font-size: 4rem;
+        top: -10px;
+        left: 10px;
+    }
+    
+    .impact-quote p {
+        font-size: var(--font-md);
     }
 }
 
