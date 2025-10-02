@@ -35,8 +35,8 @@
     --transition-color: color 0.3s ease;
     --transition-transform: transform 0.3s ease;
     
-    --icon-person: url('/img/icon-person.png');
-    --icon-heart: url('/img/icon-heart.png');
+    --icon-person: url('img/icon-person.png');
+    --icon-heart: url('img/icon-heart.png');
     
 }
 
@@ -119,6 +119,20 @@ a:focus {
     .btn-secondary {
         font-size: var(--font-bs);
         padding: var(--spacing-sm) var(--spacing);
+    }
+
+    .contact-hero {
+        padding: var(--spacing) 0;
+    }
+
+    .contact-form-section {
+        padding: var(--spacing);
+    }
+
+    .form-group input,
+    .form-groupselect, 
+    .form-group textarea {
+        font-size: 16px;
     }
 }
 
@@ -230,7 +244,7 @@ header {
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(135deg, var(--green-primary), var(--green-light));
-    background-image: url('./img/p10.jpg');
+    background-image: url('img/p10.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -661,13 +675,19 @@ header {
 
     .contact-form {
         min-width: auto;
+        width: 100%;
     }
 
     .contact-info {
         min-width: auto;
+        width: 100%;
     }
     .contact-header h1 {
-        font-size: 2rem;
+        font-size: var(--font-xl);
+    }
+
+    .contact-header p {
+        font-size: var(--font-bs);
     }
 }
 
