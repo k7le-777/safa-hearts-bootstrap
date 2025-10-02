@@ -748,7 +748,8 @@ header {
     min-width: 250px;
     max-width: 300px;
     padding: var(--spacing-lg);
-    background: linear-gradient(135deg, var(--background-light), var(--green-primary));
+    background: linear-gradient(135deg, #f9f9f9, #f0f9f0);
+    border: 2px solid var(--green-light);
     border-radius: var(--border-radius);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     text-align: center;
