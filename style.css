@@ -63,7 +63,7 @@ body {
 
 a {
   color: var(--green-light);
-  text-decoration: none;
+  text-decoration: none !important;
   transition: var(--transition-all); 
   display: inline-block; 
 }
@@ -74,6 +74,7 @@ a:focus {
   text-shadow: var(--text-shadow-glow);
   transform: scale(1.05);
   outline: none;
+  text-decoration: none !important;
 }
 
 @media (max-width: 768px) {

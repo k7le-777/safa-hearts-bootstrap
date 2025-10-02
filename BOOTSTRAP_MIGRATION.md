@@ -31,9 +31,9 @@
 ### Day 1: Foundation (2-3 hours)
 - [x] Create repository documentation
 - [x] Set up git workflow strategy
-- [ ] Add Bootstrap CDN to all HTML files
-- [ ] Test that nothing breaks
-- [ ] Commit: "feat: add bootstrap 4.5.2 cdn"
+- [x] Add Bootstrap CDN to all HTML files
+- [x] Test that nothing breaks
+- [x] Commit: "feat: add bootstrap 4.5.2 cdn"
 
 ### Day 2: Navigation (3-4 hours)
 - [ ] Migrate navbar to Bootstrap Navbar component
