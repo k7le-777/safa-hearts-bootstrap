@@ -10,27 +10,40 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-            <a href="index.html">
-                <img src="img/safa-hearts.png" alt="Safa Hearts logo">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid px-4">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/safa-hearts.png" alt="Safa Hearts logo" height="80">
             </a>
-            </div>
             
-            <ul class="nav-links">
-                <li><a href="who-we-are.html">Who We Are</a></li>
-                <li><a href="our-mission.html">Our Mission</a></li>
-                
-                
-                <li class="dropdown">
-                    <a href="#">Support</a>
-                    <ul class="dropdown-content"> 
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+            <!-- Hamburger button (shows on mobile) -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation links (collapse on mobile) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="who-we-are.html">Who We Are</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="our-mission.html">Our Mission</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="supportDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Support
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="supportDropdown">
+                            <a class="dropdown-item" href="services.html">Services</a>
+                            <a class="dropdown-item" href="contact.html">Contact</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     </header>
 
     <main>
