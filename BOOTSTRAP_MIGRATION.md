@@ -52,11 +52,11 @@
 - [ ] Commit: "refactor: convert card grids to bootstrap components"
 
 ### Day 4: Stats & Team (2-3 hours)
-- [ ] Migrate stats grid to Bootstrap grid
-- [ ] Convert team cards to Bootstrap cards
-- [ ] Test equal height cards (h-100 class)
-- [ ] Remove old grid CSS
-- [ ] Commit: "refactor: migrate stats and team grids to bootstrap"
+- [x] Migrate stats grid to Bootstrap grid
+- [x] Convert team cards to Bootstrap cards
+- [x] Test equal height cards (h-100 class)
+- [x] Remove old grid CSS
+- [x] Commit: "refactor: migrate stats and team grids to bootstrap"
 
 ### Day 5: Forms (2-3 hours)
 - [ ] Migrate contact form to Bootstrap form components
