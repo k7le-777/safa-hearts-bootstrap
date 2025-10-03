@@ -1,6 +1,6 @@
-/* =========================
-   VARIABLES
-   ========================= */
+/* ========================================
+   CSS VARIABLES
+   ======================================== */
 :root {
   --green-primary: #009000;
   --green-dark: #006a00;
@@ -32,54 +32,84 @@
   --transition: all 0.3s ease;
 }
 
-/* =========================
+/* ========================================
    RESET & BASE
-   ========================= */
-*, *::before, *::after { box-sizing: border-box; }
-html, body { height: 100%; }
+   ======================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: var(--font-main);
   color: var(--text-color);
   background: var(--background-light);
   line-height: 1.6;
 }
+
 a {
   color: var(--green-light);
-  text-decoration: none;
+  text-decoration: none !important;
   transition: var(--transition);
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
   color: var(--green-dark);
   text-shadow: 0 0 8px var(--shadow-glow);
   transform: scale(1.05);
   outline: none;
+  text-decoration: none !important;
 }
 
-/* =========================
+/* ========================================
    LAYOUT & CONTAINER
-   ========================= */
+   ======================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing);
 }
+
 section {
   padding: calc(var(--spacing-lg) * 2) 0;
 }
-.row { margin-bottom: var(--spacing-lg); }
 
-/* =========================
-   NAVBAR
-   ========================= */
+.row {
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-subtitle {
+  font-size: var(--font-md);
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* ========================================
+   BOOTSTRAP OVERRIDES - NAVBAR
+   ======================================== */
 .navbar {
   padding: 1rem 0;
 }
+
 .navbar-brand img {
   height: 80px;
   transition: var(--transition);
 }
-.navbar-brand img:hover { transform: scale(1.05); }
-.navbar-nav { align-items: center; }
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
 .navbar-nav .nav-link {
   color: var(--text-color) !important;
   padding: 0.5rem 1rem !important;
@@ -88,42 +118,49 @@ section {
   font-weight: 500;
   transition: var(--transition);
 }
+
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
   background: var(--background-light) !important;
   color: var(--green-dark) !important;
   transform: translateY(-2px);
 }
+
 .dropdown-menu {
   border: none;
   box-shadow: 0 4px 12px var(--shadow-light);
   border-radius: var(--border-radius);
   margin-top: 0.5rem;
 }
+
 .dropdown-item {
   color: var(--text-color);
   padding: 0.5rem 1rem;
   transition: var(--transition);
 }
+
 .dropdown-item:hover,
 .dropdown-item:focus {
   background: var(--background-light);
   color: var(--green-primary) !important;
 }
+
 .navbar-toggler {
   border-color: var(--green-primary);
   padding: 0.5rem;
 }
+
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0.2rem rgba(0,144,0,0.25);
 }
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23009000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* =========================
+/* ========================================
    HERO SECTION
-   ========================= */
+   ======================================== */
 .hero {
   display: flex;
   align-items: center;
@@ -133,12 +170,14 @@ section {
   background: linear-gradient(135deg, var(--green-primary), var(--green-light)), url('img/p10.jpg') center/cover fixed;
   color: var(--background-white);
 }
+
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,144,0,0.2);
   z-index: 1;
 }
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -146,12 +185,14 @@ section {
   padding: var(--spacing-lg);
   max-width: 800px;
 }
+
 .hero-content h1 {
   font-size: var(--font-xxl);
   margin-bottom: var(--spacing-lg);
   text-shadow: 0 1px 3px var(--shadow-medium);
   line-height: 1.25;
 }
+
 .hero-content p {
   font-size: var(--font-lg);
   margin-bottom: var(--spacing-lg);
@@ -159,9 +200,9 @@ section {
   opacity: 0.95;
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* ========================================
+   BOOTSTRAP OVERRIDES - BUTTONS
+   ======================================== */
 .btn-primary,
 .btn.btn-success {
   background: var(--green-dark) !important;
@@ -176,6 +217,7 @@ section {
   transition: var(--transition);
   box-shadow: 0 4px 15px var(--shadow-medium);
 }
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn.btn-success:hover,
@@ -185,6 +227,7 @@ section {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px var(--shadow-medium);
 }
+
 .btn-secondary,
 .btn.btn-outline-success {
   background: transparent !important;
@@ -198,47 +241,68 @@ section {
   border-radius: var(--border-radius);
   transition: var(--transition);
 }
+
 .btn-secondary:hover,
 .btn-secondary:focus,
 .btn.btn-outline-success:hover,
 .btn.btn-outline-success:focus {
   background: var(--green-primary) !important;
+  border-color: var(--green-primary) !important;
   color: var(--background-white) !important;
   transform: translateY(-2px);
 }
-.btn-lg { padding: var(--spacing-md) var(--spacing-xl); font-size: 1.2rem; }
-.btn-sm { padding: var(--spacing-sm) var(--spacing); font-size: 0.9rem; }
-.highlight-word { transition: color 0.3s ease; }
+
+.btn-lg {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.2rem;
+}
+
+.btn-sm {
+  padding: var(--spacing-sm) var(--spacing);
+  font-size: 0.9rem;
+}
+
+.highlight-word {
+  transition: color 0.3s ease;
+}
+
 .btn-primary:hover .highlight-word,
 .btn.btn-success:hover .highlight-word {
   color: var(--green-light);
   text-shadow: 0 0 8px var(--shadow-glow);
 }
 
-/* =========================
-   CARD & GRID
-   ========================= */
+/* ========================================
+   BOOTSTRAP OVERRIDES - CARDS
+   ======================================== */
 .card {
   border-radius: var(--border-radius);
   transition: var(--transition);
   overflow: hidden;
 }
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px var(--shadow-medium) !important;
 }
+
 .card-img-wrapper {
   height: 200px;
   overflow: hidden;
   position: relative;
 }
+
 .card-img-top {
   height: 100%;
   width: 100%;
   object-fit: cover;
   transition: var(--transition);
 }
-.card:hover .card-img-top { transform: scale(1.05); }
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
 .card-banner {
   background: linear-gradient(to top, rgba(0,144,0,0.9), rgba(0,144,0,0.7));
   font-size: 1.5rem;
@@ -246,17 +310,36 @@ section {
   text-shadow: 0 1px 3px var(--shadow-medium);
   letter-spacing: 1px;
 }
-.card-body { padding: var(--spacing-lg); }
-.card-text { color: var(--text-color); line-height: 1.6; }
 
-/* =========================
-   STATS SECTION
-   ========================= */
+.card-body {
+  padding: var(--spacing-lg);
+}
+
+.card-text {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================
+   INDEX PAGE - HOW IT WORKS
+   ======================================== */
+.how-it-works {
+  background: var(--background-white);
+}
+
+/* ========================================
+   INDEX PAGE - STATS SECTION
+   ======================================== */
 .stats-section {
   background: var(--green-primary);
   color: var(--background-white);
 }
-.stat-item { padding: var(--spacing); }
+
+.stat-item {
+  padding: var(--spacing);
+}
+
 .stat-number {
   font-size: 3rem;
   font-weight: bold;
@@ -264,6 +347,7 @@ section {
   text-shadow: 0 1px 3px var(--shadow-medium);
   margin-bottom: var(--spacing);
 }
+
 .stat-label {
   font-size: 1.1rem;
   opacity: 0.9;
@@ -271,26 +355,29 @@ section {
   letter-spacing: 1px;
 }
 
-/* =========================
-   DONATION SECTION
-   ========================= */
+/* ========================================
+   INDEX PAGE - DONATION SECTION
+   ======================================== */
 .donation-section {
   background: linear-gradient(135deg, #f9f9f9, #f0f9f0);
   padding: calc(var(--spacing-lg) * 1.5) 0;
   border-top: 3px solid var(--green-light);
   border-bottom: 3px solid var(--green-light);
 }
+
 .donation-content {
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
   padding: var(--spacing-lg);
 }
+
 .donation-content h2 {
   font-size: 2.5rem;
   color: var(--green-primary);
   margin-bottom: var(--spacing-lg);
 }
+
 .donation-content p {
   font-size: 1.2rem;
   color: var(--text-color);
@@ -298,6 +385,7 @@ section {
   margin-bottom: calc(var(--spacing-lg) * 1.5);
   opacity: 0.9;
 }
+
 .donation-actions {
   display: flex;
   justify-content: center;
@@ -305,94 +393,9 @@ section {
   flex-wrap: wrap;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
-footer {
-  background: var(--background-dark);
-  color: var(--background-white);
-  padding: var(--spacing-lg) 0 var(--spacing) 0;
-}
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
-}
-.footer-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing);
-  margin-bottom: var(--spacing);
-}
-.footer-logo img { height: 90px; }
-.footer-section {
-  flex: 1;
-  min-width: 200px;
-}
-.footer-section h4 {
-  color: var(--green-light);
-  margin-bottom: var(--spacing);
-}
-.footer-section ul { list-style: none; }
-.footer-section ul li { margin-bottom: 0.5rem; }
-.footer-section ul li a {
-  color: var(--background-white);
-  opacity: 0.8;
-  transition: color 0.3s ease;
-}
-.footer-section ul li a:hover {
-  opacity: 0.9;
-  color: var(--green-light);
-}
-.footer-bottom {
-  text-align: center;
-  padding-top: var(--spacing);
-  border-top: 1px solid rgba(255,255,255,0.1);
-  opacity: 0.7;
-  font-size: 0.9rem;
-}
-
-/* =========================
-   MISSION PAGE CARDS
-   ========================= */
-.mission-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
-}
-.mission-card {
-  flex: 1;
-  min-width: 250px;
-  padding: var(--spacing-lg);
-  background: var(--background-white);
-  border-left: 4px solid var(--green-primary);
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 15px var(--shadow-light);
-  transition: var(--transition);
-}
-.mission-card:hover {
-  transform: translateX(5px);
-  box-shadow: 0 6px 20px rgba(0,144,0,0.15);
-  border-left-width: 6px;
-}
-.mission-card h3 {
-  color: var(--green-primary);
-  margin-bottom: var(--spacing);
-  font-size: 1.3rem;
-}
-.mission-card p {
-  color: var(--text-color);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* =========================
-   PAGE HERO
-   ========================= */
+/* ========================================
+   PAGE HERO (INTERIOR PAGES)
+   ======================================== */
 .page-hero {
   background: linear-gradient(135deg, var(--green-primary), var(--green-dark));
   color: var(--background-white);
@@ -400,11 +403,13 @@ footer {
   text-align: center;
   box-shadow: 0 4px 15px var(--shadow-medium);
 }
+
 .page-hero h1 {
   font-size: 2.5rem;
   margin-bottom: var(--spacing);
   text-shadow: 0 1px 3px var(--shadow-medium);
 }
+
 .page-hero p {
   font-size: 1.2rem;
   opacity: 0.9;
@@ -412,57 +417,9 @@ footer {
   margin: 0 auto;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color-light);
-  }
-  .navbar-nav { align-items: flex-start; }
-  .navbar-nav .nav-link { padding: 0.75rem 1rem !important; width: 100%; }
-  .dropdown-menu { box-shadow: none; padding-left: 1rem; }
-}
-@media (max-width: 768px) {
-  .navbar { flex-direction: column; gap: var(--spacing); }
-  .nav-links { flex-direction: column; width: 100%; text-align: center; }
-  .hero-content { padding: var(--spacing); }
-  .mission-cards { flex-direction: column; }
-  .info-box { padding: var(--spacing); }
-  .page-hero h1,
-  .how-it-works h2,
-  .donation-content h2 { font-size: var(--font-xl); }
-  .cards-grid,
-  .stats-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing);
-  }
-  .card { max-width: 100%; }
-  .stat-number { font-size: 2.5rem; }
-  .how-it-works h2 { font-size: var(--font-xl); }
-  .footer-content { flex-direction: column; text-align: center; }
-  .footer-logo { justify-content: center; }
-}
-@media (max-width: 480px) {
-  .logo img { height: 80px; }
-  .hero-content h1 { font-size: var(--font-lg); }
-  .btn-primary,
-  .btn-secondary { font-size: 1rem; padding: var(--spacing-sm) var(--spacing); }
-  .contact-hero,
-  .contact-form-section { padding: var(--spacing); }
-  .form-group input,
-  .form-group select,
-  .form-group textarea { font-size: 16px; }
-}
-
-/* =========================
+/* ========================================
    WHO WE ARE PAGE
-   ========================= */
-
-/* Content sections */
+   ======================================== */
 .content-section {
   padding: calc(var(--spacing-lg) * 2) 0;
   background: var(--background-white);
@@ -587,7 +544,7 @@ footer {
   flex-grow: 1;
 }
 
-/* Placeholder avatars with pseudo-elements */
+/* Placeholder avatars */
 .placeholder-avatar {
   position: relative;
   width: 150px;
@@ -642,7 +599,7 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Team CTA box */
+/* Team CTA */
 .team-cta {
   text-align: center;
   max-width: 700px;
@@ -663,10 +620,9 @@ footer {
   margin-bottom: var(--spacing-lg);
 }
 
-/* =========================
-   OUR MISSION PAGE  
-   ========================= */
-
+/* ========================================
+   OUR MISSION PAGE
+   ======================================== */
 .mission-intro {
   max-width: 900px;
   margin: 0 auto calc(var(--spacing-lg) * 2);
@@ -700,6 +656,44 @@ footer {
   margin-bottom: 0;
 }
 
+/* Mission cards */
+.mission-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.mission-card {
+  flex: 1;
+  min-width: 250px;
+  padding: var(--spacing-lg);
+  background: var(--background-white);
+  border-left: 4px solid var(--green-primary);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px var(--shadow-light);
+  transition: var(--transition);
+}
+
+.mission-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0,144,0,0.15);
+  border-left-width: 6px;
+}
+
+.mission-card h3 {
+  color: var(--green-primary);
+  margin-bottom: var(--spacing);
+  font-size: 1.3rem;
+}
+
+.mission-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Impact section */
 .impact-section {
   max-width: 900px;
   margin: calc(var(--spacing-lg) * 2) auto;
@@ -761,10 +755,9 @@ footer {
   margin-bottom: 0;
 }
 
-/* =========================
+/* ========================================
    SERVICES PAGE
-   ========================= */
-
+   ======================================== */
 .service-icon {
   font-size: 3rem;
 }
@@ -795,10 +788,9 @@ footer {
   margin-bottom: var(--spacing);
 }
 
-/* =========================
+/* ========================================
    CONTACT PAGE
-   ========================= */
-
+   ======================================== */
 .contact-form-section {
   padding: calc(var(--spacing-lg) * 2) 0;
   background: var(--background-white);
@@ -845,7 +837,7 @@ footer {
   color: var(--text-color);
 }
 
-/* Form styling */
+/* Forms */
 .form-group {
   margin-bottom: var(--spacing-lg);
 }
@@ -881,4 +873,209 @@ footer {
 textarea.form-control {
   resize: vertical;
   min-height: 120px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+  background: var(--background-dark);
+  color: var(--background-white);
+  padding: var(--spacing-lg) 0 var(--spacing) 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+.footer-logo img {
+  height: 90px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  color: var(--green-light);
+  margin-bottom: var(--spacing);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: var(--background-white);
+  opacity: 0.8;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  opacity: 0.9;
+  color: var(--green-light);
+  transform: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   RESPONSIVE MEDIA QUERIES
+   ======================================== */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color-light);
+  }
+  
+  .navbar-nav {
+    align-items: flex-start;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem !important;
+    width: 100%;
+  }
+  
+  .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    background-attachment: scroll;
+  }
+  
+  .hero-content h1 {
+    font-size: var(--font-xl);
+  }
+  
+  .hero-content p {
+    font-size: var(--font-md);
+  }
+  
+  .hero-content {
+    padding: var(--spacing);
+  }
+  
+  .page-hero h1,
+  .donation-content h2 {
+    font-size: var(--font-xl);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .values-grid,
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .value-card,
+  .team-member {
+    max-width: 100%;
+  }
+  
+  .content-text h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-content {
+    flex-direction: column;
+  }
+  
+  .contact-form,
+  .contact-info {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .mission-intro,
+  .impact-section {
+    padding: var(--spacing);
+  }
+  
+  .mission-intro h2,
+  .impact-section h2 {
+    font-size: var(--font-xl);
+  }
+  
+  .impact-quote::before {
+    font-size: 4rem;
+    top: -10px;
+    left: 10px;
+  }
+  
+  .impact-quote p {
+    font-size: var(--font-md);
+  }
+  
+  .mission-cards {
+    flex-direction: column;
+  }
+  
+  .info-box {
+    padding: var(--spacing);
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand img {
+    height: 60px;
+  }
+  
+  .hero-content h1 {
+    font-size: var(--font-lg);
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .btn.btn-success,
+  .btn.btn-outline-success {
+    font-size: 1rem;
+    padding: var(--spacing-sm) var(--spacing);
+  }
+  
+  .form-control {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
 }
