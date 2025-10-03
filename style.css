@@ -167,14 +167,17 @@ section {
   justify-content: center;
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(135deg, var(--green-primary), var(--green-light)), url('img/p10.jpg') center/cover fixed;
+  background-image: url('img/p10.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: var(--background-white);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,144,0,0.2);
+  background: linear-gradient(135deg, rgba(0, 144, 0, 0.5), rgba(34, 232, 34, 0.3));
   z-index: 1;
 }
 
